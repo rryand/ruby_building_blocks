@@ -4,15 +4,11 @@ def substrings(string, dictionary)
     arr.each do |word|
         dictionary.each do |listing|
             if word.include? listing
-                if !substring.has_key?(listing)
-                    substring[listing] = 1
-                else
-                    substring[listing] += 1
-                end
+                !substring.has_key?(listing) ? substring[listing] = 1 : substring[listing] += 1
             end
         end
     end
-    p substring
+    puts substring
 end
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]

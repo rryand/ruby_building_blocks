@@ -9,11 +9,7 @@ def stock_picker(stock_prices)
             end
         end
     end
-    if (ideal_days.empty?)
-        p "Don't buy!"
-    else
-        p "#{ideal_days} for a profit of $#{profit}."
-    end
+    puts ideal_days.empty? ? "Don't buy!" : "#{ideal_days} for a profit of $#{profit}."
 end
 
 stock_picker([17,3,6,9,15,8,6,1,10])
